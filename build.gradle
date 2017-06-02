@@ -39,13 +39,16 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-validation')
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.projectlombok:lombok')
-    runtime('org.springframework.retry:spring-retry')
-    runtime('org.springframework.boot:spring-boot-starter-aop')
     compile('org.springframework.cloud:spring-cloud-starter-oauth2')
     compile('org.springframework.security:spring-security-jwt')
+
+    //The next two dependencies need for retry mechanism.
+    runtime('org.springframework.retry:spring-retry')
+    runtime('org.springframework.boot:spring-boot-starter-aop')
     runtime('org.springframework.boot:spring-boot-devtools')
     runtime('org.postgresql:postgresql')
     runtime('com.h2database:h2')
+
     testCompile('org.liquibase:liquibase-core')
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile('org.springframework.restdocs:spring-restdocs-mockmvc')
@@ -66,4 +69,4 @@ test {
 }
 
 //TODO: improve code coverage and remove
-checkMinimumCoverage.enabled=false
+checkMinimumCoverage.enabled = false
